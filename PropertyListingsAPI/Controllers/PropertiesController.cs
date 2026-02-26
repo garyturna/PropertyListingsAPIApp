@@ -3,7 +3,9 @@ using PropertyListingsAPI.Models;
 
 namespace PropertyListingsAPI.Controllers
 {
-    public class PropertiesController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class PropertiesController : ControllerBase
     {
         // Temporary in-memory list - we'll replace with database later
         private static List<Property> _properties = new List<Property>
